@@ -101,6 +101,8 @@ const noop = () => null;
 
 SocialPlayer.defaultProps = {
   controls: false,
+  loop: false,
+  muted: false,
   onPlay: noop,
   onPause: noop,
   onEnd: noop,
