@@ -8,7 +8,6 @@ export interface SocialPlayerProps {
   id?: string;
   width?: number | string;
   height?: number | string;
-
   src?: string;
   playing?: boolean;
   loop?: boolean;
@@ -16,13 +15,10 @@ export interface SocialPlayerProps {
   muted?: boolean;
   controls?: boolean;
   showTitle?: boolean;
-
   onPlay?(): void;
   onPause?(): void;
   onEnd?(): void;
-
   playerRef?(any): void;
-
 }
 
 /**
@@ -57,9 +53,6 @@ export const SocialPlayer: React.SFC<SocialPlayerProps> = props => {
         onPlay={onPlay}
         onPause={onPause}
         onEnded={onEnd}
-        onReady={() => console.log('onReady')}
-        onStart={() => console.log('onStart')}
-        onError={e => console.log('onError', e)}
       />
     </div>
   );
@@ -107,8 +100,6 @@ SocialPlayer.propTypes = {
 const noop = () => null;
 
 SocialPlayer.defaultProps = {
-  // width: '100%',
-  // height: '100%',
   controls: false,
   onPlay: noop,
   onPause: noop,
