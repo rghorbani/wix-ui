@@ -48,7 +48,7 @@ export const SocialPlayer: React.SFC<SocialPlayerProps> = props => {
         loop={loop}
         volume={volume}
         muted={muted}
-        playsinline={true}
+        playsinline
         controls={controls}
         onPlay={onPlay}
         onPause={onPause}
